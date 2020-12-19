@@ -26,10 +26,9 @@ We consider to use AWS as our Cloud provider because is the platform that we hav
 
 ## Feature List
 
-|     Name     |     Description      |                 Service                 |
-| :----------: | :------------------: | :-------------------------------------: |
-| Feature Name | Feature Description. | Service name where the feature belongs. |
-
-## Additional Context
-
-<!-- - [ ] This feature is from the [PROPOSAL_NAME](#PROPOSAL_LINK) -->
+|     Name     |     Description      |                
+| :----------: | :------------------: | 
+| Set up CI    | Set up a CI pipeline with CircleCI |
+| Build the scraper    | Build the scraper with scrapy |
+| Set up infraestucture    | Build the AWS infraestructure for scraper|
+| Set up CD    | Set up a CD pipeline with CircleCI |
