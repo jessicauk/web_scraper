@@ -1,5 +1,7 @@
 # web_scraper
 
+[![web_scraper](https://circleci.com/gh/jessicauk/web_scraper.svg?style=svg)](https://circleci.com/gh/jessicauk/web_scraper/)
+
 ## Table of Contents
 
 - [Requirements](#requirements)
