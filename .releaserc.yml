@@ -1,0 +1,9 @@
+branch: master
+repositoryUrl: https://github.com/jessicauk/web_scraper
+plugins:
+    - '@semantic-release/commit-analyzer'
+    - '@semantic-release/release-notes-generator'
+    - '@semantic-release/npm':
+        npmPublish: false
+    - '@semantic-release/changelog'
+    - '@semantic-release/git'
