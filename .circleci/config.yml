@@ -8,6 +8,14 @@ executors:
     docker:
       - image: circleci/python:3.7.9-stretch
 
+commands:
+  install_dependencies:
+    description: 'Install Dependencies'
+    steps:
+      - run:
+          name: 'Install Dependencies'
+          command: make install
+
 jobs:
   generate_release:
     executor: node
@@ -19,15 +27,27 @@ jobs:
             sudo npm i -g @semantic-release/changelog @semantic-release/git semantic-release
             semantic-release
 
-  # run_linter:
-  # run_test:
+  run_test:
+    executor: python
+    steps:
+      - checkout
+      - install_dependencies
+      - run:
+          name: 'Run Tests'
+          command: make test
+
 
 workflows:
   development:
     jobs:
-      - run_linter
-      - run_test
+      - run_test:
+          filters:
+            branches:
+              ignore: master
 
   production:
     jobs:
-      - generate_release
+      - generate_release:
+          filters:
+            branches:
+              only: master
