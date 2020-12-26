@@ -29,8 +29,7 @@ source venv/bin/activate
 3. Install the dependencies.
 
 ```sh
-pip install -r requiremens/development.txt
-pip install -r requiremens/production.txt
+make install
 ```
 
 4. Configure VSCode (Optional).
