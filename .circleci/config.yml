@@ -36,11 +36,23 @@ jobs:
           name: 'Run Tests'
           command: make test
 
+  run_linter:
+    executor: python
+    steps:
+      - checkout
+      - install_dependencies
+      - run:
+          name: 'Run Linter'
+          command: make lint
 
 workflows:
   development:
     jobs:
       - run_test:
+          filters:
+            branches:
+              ignore: master
+      - run_linter:
           filters:
             branches:
               ignore: master
