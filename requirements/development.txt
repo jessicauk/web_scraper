@@ -1,2 +1,3 @@
 expects==0.9.0
 mamba==0.11.2
+wemake-python-styleguide==0.14.1
