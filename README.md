@@ -40,7 +40,10 @@ Add this config to your `.vscode/settings.json` file.
 
 ```sh
 {
-    "python.pythonPath": "venv/bin/python"
+    "python.pythonPath": "venv/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
 ```
 
@@ -50,4 +53,10 @@ Add this config to your `.vscode/settings.json` file.
 
 ```sh
 make test
+```
+
+### Run linter
+
+```sh
+make linter
 ```
