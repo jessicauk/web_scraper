@@ -27,6 +27,17 @@ jobs:
             sudo npm i -g @semantic-release/changelog @semantic-release/git semantic-release
             semantic-release
 
+  run_codecov:
+    executor: python
+    steps:
+      - checkout
+      - install_dependencies
+      - run:
+          name: 'Run Codecov'
+          command: |
+            make coverage
+            bash <(curl -s https://codecov.io/bash)
+
   run_test:
     executor: python
     steps:
@@ -52,6 +63,12 @@ workflows:
           filters:
             branches:
               ignore: master
+      - run_codecov:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - run_test
       - run_linter:
           filters:
             branches:
