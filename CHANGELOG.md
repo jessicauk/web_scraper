@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/jessicauk/web_scraper/compare/v1.0.0...v1.1.0) (2021-01-16)
+
+
+### Features
+
+* Add .coverage and coverage.json files to gitignore. ([bf2a0f8](https://github.com/jessicauk/web_scraper/commit/bf2a0f8a679dcfccc65e24366970977d3caf50c0))
+* Add coverage package. ([0b0bfe9](https://github.com/jessicauk/web_scraper/commit/0b0bfe9d4f88e5cdc392a6865ab194075fbb95c6))
+* Add coverage to the Makefile. ([16e63c2](https://github.com/jessicauk/web_scraper/commit/16e63c2b4ddd626523d41f072f47bbe5407f52ed))
+* Add run_codecov job in the development workflow. ([8d3ded0](https://github.com/jessicauk/web_scraper/commit/8d3ded059022c7aef1bbe2c5e4a3c27f35d59648))
+
 # 1.0.0 (2021-01-09)
 
 
