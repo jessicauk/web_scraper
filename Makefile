@@ -1,6 +1,6 @@
 coverage:
-	- mamba --format=documentation --enable-coverage src/**/**/tests/*_test.py
-	- coverage run src/**
+	- mamba --enable-coverage src/**/**/tests/*_test.py
+	- coverage json
 
 install:
 	- pip install -r requirements/development.txt
